@@ -1,19 +1,19 @@
 #include "monty.h"
 
 /**
- * print_char - Prints the Ascii value.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * print_char - Prints the Ascii value
+ * @stack: Pointer to a pointer
+ * @line_number: Interger representing
+ * Return: nothing
  */
 void print_char(stack_t **stack, unsigned int line_number)
 {
-	int ascii;
+	int as_ii;
 
-	if (stack == NULL || *stack == NULL)
+	if (!stack || !(*stack))
 		string_err(11, line_number);
-
-	ascii = (*stack)->n;
-	if (ascii < 0 || ascii > 127)
+	as_ii = (*stack)->n;
+	if (as_ii < 0 || as_ii > 127)
 		string_err(10, line_number);
-	printf("%c\n", ascii);
+	printf("%c\n", as_ii);
 }

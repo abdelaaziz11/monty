@@ -1,28 +1,30 @@
 #include "monty.h"
 /**
- * print_str - Prints a string.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * print_str - Prints a string
+ * @stack: Pointer to a pointer
+ * @ln: Interger representing
+ * Return: nothing
  */
-void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
+void print_str(stack_t **stack, unsigned int ln)
 {
-	int ascii;
-	stack_t *tmp;
+	int as_ii;
+	stack_t *itm;
 
-	if (stack == NULL || *stack == NULL)
+	(void)ln;
+	if (!stack || !(*stack))
 	{
 		printf("\n");
 		return;
 	}
 
-	tmp = *stack;
-	while (tmp != NULL)
+	itm = *stack;
+	while (itm)
 	{
-		ascii = tmp->n;
-		if (ascii <= 0 || ascii > 127)
+		as_ii = itm->n;
+		if (as_ii <= 0 || as_ii > 127)
 			break;
-		printf("%c", ascii);
-		tmp = tmp->next;
+		printf("%c", as_ii);
+		itm = itm->next;
 	}
 	printf("\n");
 }

@@ -2,19 +2,20 @@
 
 /**
  * pop_top - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @stack: Pointer to a pointer
+ * @line_number: Interger representing
+ * Return: nothing
  */
 void pop_top(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp;
+	stack_t *itm;
 
-	if (stack == NULL || *stack == NULL)
+	if (!stack || !(*stack))
 		more_err(7, line_number);
 
-	tmp = *stack;
-	*stack = tmp->next;
-	if (*stack != NULL)
+	itm = *stack;
+	*stack = itm->next;
+	if (*stack)
 		(*stack)->prev = NULL;
-	free(tmp);
+	free(itm);
 }

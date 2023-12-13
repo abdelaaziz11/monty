@@ -2,17 +2,16 @@
 
 /**
  * open_file - opens a file
- * @file_name: the file namepath
- * Return: void
+ * @fileName: the file namepath
+ * Return: Nothing
  */
-
-void open_file(char *file_name)
+void open_file(char *fileName)
 {
-	FILE *fd = fopen(file_name, "r");
+	FILE *f = fopen(fileName, "r");
 
-	if (file_name == NULL || fd == NULL)
-		err(2, file_name);
+	if (fileName == NULL || f == NULL)
+		err(2, fileName);
 
-	read_file(fd);
-	fclose(fd);
+	read_file(f);
+	fclose(f);
 }
