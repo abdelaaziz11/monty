@@ -2,11 +2,11 @@
 
 /**
  * more_err - handles errors.
- * @error_code: The error codes are the following:
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
- * (9) => Division by zero.
+ * @error_code: The error codes are:
+ * (6) => When the stack is empty for pint.
+ * (7) => When the stack is empty for pop.
+ * (8) => When stack is short for operation.
+ * (9) => Zero division.
  */
 void more_err(int error_code, ...)
 {

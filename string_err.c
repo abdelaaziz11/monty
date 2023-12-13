@@ -2,8 +2,8 @@
 
 /**
  * string_err - handles errors.
- * @error_code: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
+ * @error_code: The error codes are:
+ * (10) ~> The number inside a node is not an ASCII.
  * (11) ~> The stack is empty.
  */
 void string_err(int error_code, ...)
