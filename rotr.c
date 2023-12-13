@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * rotr - Rotates the last node 
+ * rotr - Rotates the last node
  * @stack: Pointer to a pointer
  * @ln: Interger representing
  * Return: nothing

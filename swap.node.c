@@ -11,7 +11,7 @@ void swap_nodes(stack_t **stack, unsigned int line_number)
 
 	if (stack == NULL || (*stack) == NULL || (*stack)->next == NULL)
 		more_err(8, line_number, "swap");
-	
+
 	itm = (*stack)->next;
 	(*stack)->next = itm->next;
 	if (itm->next != NULL)
