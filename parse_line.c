@@ -11,11 +11,11 @@ int parse_line(char *buffer, int line_number, int format)
 	char *op, *val;
 	const char *del = "\n ";
 
-	if (!buffer)
+	if (buffer == NULL)
 		err(4);
 
 	op = strtok(buffer, del);
-	if (!op)
+	if (op == NULL)
 		return (format);
 	val = strtok(NULL, del);
 
