@@ -10,8 +10,9 @@ void print_char(stack_t **stack, unsigned int line_number)
 {
 	int as_ii;
 
-	if (!stack || !(*stack))
+	if (stack == NULL || *stack == NULL)
 		string_err(11, line_number);
+
 	as_ii = (*stack)->n;
 	if (as_ii < 0 || as_ii > 127)
 		string_err(10, line_number);

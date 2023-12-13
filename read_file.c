@@ -6,13 +6,13 @@
  */
 void read_file(FILE *fd)
 {
-	int lin_num, form = 0;
+	int lin_num, format = 0;
 	char *buf = NULL;
 	size_t l = 0;
 
 	for (lin_num = 1; getline(&buf, &l, fd) != -1; lin_num++)
 	{
-		form = parse_line(buf, lin_num, form);
+		format = parse_line(buf, lin_num, format);
 	}
 	free(buf);
 }

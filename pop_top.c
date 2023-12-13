@@ -10,7 +10,7 @@ void pop_top(stack_t **stack, unsigned int line_number)
 {
 	stack_t *itm;
 
-	if (!stack || !(*stack))
+	if (stack == NULL || *stack == NULL)
 		more_err(7, line_number);
 
 	itm = *stack;

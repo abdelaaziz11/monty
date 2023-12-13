@@ -5,12 +5,11 @@
  * @ln: Interger representing
  * Return: nothing
  */
-void rotl(stack_t **stack, unsigned int ln)
+void rotl(stack_t **stack, __attribute__ ((unused))unsigned int ln)
 {
 	stack_t *itm;
 
-	(void)ln;
-	if (!stack || !(*stack) || !((*stack)->next))
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;
 	itm = *stack;
 	while (itm->next)
